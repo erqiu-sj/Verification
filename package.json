@@ -1,0 +1,14 @@
+{
+  "name": "lverifica",
+  "version": "1.0.0",
+  "description": "用于一些简单验证提供了可添加自己验证的 Api",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [
+    "Api",
+    "verification",
+    "javascript"
+  ],
+  "author": "Shijie Qiu",
+  "license": "ISC"
+}
