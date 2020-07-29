@@ -4,7 +4,7 @@
 
 ## 如在 Typescript 环境下使用需再安装
 
-`npm i @typs/lverifica -D`
+`npm i types_lverifica -D`
 
 ### 现在支持的判断方法有
 
