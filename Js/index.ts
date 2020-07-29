@@ -211,16 +211,6 @@ export function insertBefore(el: HTMLElement, htmlString: string): void {
   el.insertAdjacentHTML("beforebegin", htmlString);
 }
 /**
- * 用于判断数据是否为指定的数据类型，如果是则返回true
- *
- * is(Array, [1]); // true
- * @param type any
- * @param val any
- */
-export function is(type: any, val: any): boolean {
-  return ![, null].includes(val) && val.constructor === type;
-}
-/**
  * 接受两个日期类型的参数，判断前者的日期是否晚于后者的日期
  *
  * isAfterDate(new Date(2010, 10, 21), new Date(2010, 10, 20)); // true
@@ -236,4 +226,25 @@ export function isAfterDate(dateA: Date, dateB: Date): boolean {
  */
 export function Last(arr: Array<any>): Array<any> {
   return arr[arr.length - 1];
+}
+/**
+ * 判断两个值是否相等
+ *
+ * isTrue(NaN,NaN) //true
+ * @param valOne 比较的值
+ * @param valTwo 比较的值
+ */
+export function isTrue(valOne: any, valTwo: any): boolean {
+  return Object.is(valOne, valTwo);
+}
+/**
+ * 数组中是否包含该值
+ *
+ * There([1,2,3],3) //true
+ *
+ * @param arr Array
+ * @param val any
+ */
+export function There(arr: Array<any>, val: any): boolean {
+  return arr.inclues(val);
 }
