@@ -6,10 +6,8 @@ var __spreadArrays = (this && this.__spreadArrays) || function () {
             r[k] = a[j];
     return r;
 };
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.Last = exports.isAfterDate = exports.is = exports.insertBefore = exports.insertAfter = exports.hasClass = exports.getType = exports.getStyle = exports.getDaysDiffBetweenDates = exports.getColonTimeFromDate = exports.elementContains = exports.dropWhile = exports.dropRightWhile = exports.Drop = exports.difference = exports.defaults = exports.countOccurrences = exports.compact = exports.capitalizeEveryWord = exports.bifurcateBy = exports.allEqual = exports.isUrl = exports.isNumber = exports.isEmpty = exports.isOdd = exports.isEvent = void 0;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.isTrue = exports.Last = exports.isAfterDate = exports.insertBefore = exports.insertAfter = exports.hasClass = exports.getType = exports.getStyle = exports.getDaysDiffBetweenDates = exports.getColonTimeFromDate = exports.elementContains = exports.dropWhile = exports.dropRightWhile = exports.Drop = exports.difference = exports.defaults = exports.countOccurrences = exports.compact = exports.capitalizeEveryWord = exports.bifurcateBy = exports.allEqual = exports.isUrl = exports.isNumber = exports.isEmpty = exports.isOdd = exports.isEvent = void 0;
 /**
  * 判断偶数
  * @param val number | string
@@ -61,9 +59,7 @@ exports.isUrl = isUrl;
  * @param arr Array<any>
  */
 function allEqual(arr) {
-    return arr.every(function (val) {
-        return val === arr[0];
-    });
+    return arr.every(function (val) { return val === arr[0]; });
 }
 exports.allEqual = allEqual;
 /**
@@ -72,9 +68,7 @@ exports.allEqual = allEqual;
  * @param fn Function
  */
 function bifurcateBy(arr, fn) {
-    return arr.reduce(function (acc, val, i) {
-        return (acc[fn(val, i) ? 0 : 1].push(val), acc);
-    }, [
+    return arr.reduce(function (acc, val, i) { return (acc[fn(val, i) ? 0 : 1].push(val), acc); }, [
         [],
         [],
     ]);
@@ -85,9 +79,7 @@ exports.bifurcateBy = bifurcateBy;
  * @param str string
  */
 function capitalizeEveryWord(str) {
-    return str.replace(/\b[a-z]/g, function (char) {
-        return char.toUpperCase();
-    });
+    return str.replace(/\b[a-z]/g, function (char) { return char.toUpperCase(); });
 }
 exports.capitalizeEveryWord = capitalizeEveryWord;
 /**
@@ -104,9 +96,7 @@ exports.compact = compact;
  * @param val number
  */
 function countOccurrences(arr, val) {
-    return arr.reduce(function (a, v) {
-        return (v === val ? a + 1 : a);
-    }, 0);
+    return arr.reduce(function (a, v) { return (v === val ? a + 1 : a); }, 0);
 }
 exports.countOccurrences = countOccurrences;
 /**
@@ -129,9 +119,7 @@ exports.defaults = defaults;
  */
 function difference(arr, arrT) {
     var s = new Set(arrT);
-    return arr.filter(function (x) {
-        return !s.has(x);
-    });
+    return arr.filter(function (x) { return !s.has(x); });
 }
 exports.difference = difference;
 /**
@@ -140,9 +128,7 @@ exports.difference = difference;
  * @param n number 默认=1
  */
 function Drop(arr, n) {
-    if (n === void 0) {
-        n = 1;
-    }
+    if (n === void 0) { n = 1; }
     return arr.slice(n);
 }
 exports.Drop = Drop;
@@ -221,11 +207,11 @@ exports.getStyle = getStyle;
  * @param val Type
  */
 function getType(val) {
-    return val === undefined ?
-        "undefined" :
-        val === null ?
-        "null" :
-        val.constructor.name.toLowerCase();
+    return val === undefined
+        ? "undefined"
+        : val === null
+            ? "null"
+            : val.constructor.name.toLowerCase();
 }
 exports.getType = getType;
 /**
@@ -261,17 +247,6 @@ function insertBefore(el, htmlString) {
 }
 exports.insertBefore = insertBefore;
 /**
- * 用于判断数据是否为指定的数据类型，如果是则返回true
- *
- * is(Array, [1]); // true
- * @param type any
- * @param val any
- */
-function is(type, val) {
-    return ![, null].includes(val) && val.constructor === type;
-}
-exports.is = is;
-/**
  * 接受两个日期类型的参数，判断前者的日期是否晚于后者的日期
  *
  * isAfterDate(new Date(2010, 10, 21), new Date(2010, 10, 20)); // true
@@ -290,3 +265,14 @@ function Last(arr) {
     return arr[arr.length - 1];
 }
 exports.Last = Last;
+/**
+ * 判断两个值是否相等
+ *
+ * isTrue(NaN,NaN) //true
+ * @param valOne 比较的值
+ * @param valTwo 比较的值
+ */
+function isTrue(valOne, valTwo) {
+    return Object.is(valOne, valTwo);
+}
+exports.isTrue = isTrue;

@@ -2,10 +2,6 @@
 
 `npm i lverifica -D`
 
-## 如在 Typescript 环境下使用需再安装
-
-`npm i types_lverifica -D`
-
 ### 现在支持的判断方法有
 
 | 函数名               | 参数                                    | 返回值     | 说明                                                                                                         |
@@ -35,4 +31,3 @@
 | isAfterDate          | dateA: Date, dateB: Date                | boolean    | 接受两个日期类型的参数，判断前者的日期是否晚于后者的日期                                                     |
 | Last                 | arr: Array<any>                         | Array<any> | 返回数组最后的元素                                                                                           |
 | isTrue               | valOne: any, valTwo: any                | boolean    | 判断两个值是否相等                                                                                           |
-| There                | arr: Array<any>, val: any               | boolean    | 数组中是否包含该值                                                                                           |
