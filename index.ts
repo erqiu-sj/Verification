@@ -237,14 +237,4 @@ export function Last(arr: Array<any>): Array<any> {
 export function isTrue(valOne: any, valTwo: any): boolean {
   return Object.is(valOne, valTwo);
 }
-/**
- * 数组中是否包含该值
- *
- * There([1,2,3],3) //true
- *
- * @param arr Array
- * @param val any
- */
-export function There(arr: Array<any>, val: any): boolean {
-  return arr.inclues(val);
-}
+
