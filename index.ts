@@ -237,4 +237,3 @@ export function Last(arr: Array<any>): Array<any> {
 export function isTrue(valOne: any, valTwo: any): boolean {
   return Object.is(valOne, valTwo);
 }
-
