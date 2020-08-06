@@ -11,6 +11,7 @@ exports.isTrue = exports.Last = exports.isAfterDate = exports.insertBefore = exp
 /**
  * 判断偶数
  * @param val number | string
+ * @return boolean
  */
 function isEvent(val) {
     if (typeof val == "string")
@@ -21,6 +22,7 @@ exports.isEvent = isEvent;
 /**
  * 判断奇数
  * @param val number | string
+ * @return boolean
  */
 function isOdd(val) {
     if (typeof val == "string")
@@ -31,6 +33,7 @@ exports.isOdd = isOdd;
 /**
  * 判断是否为空
  * @param val string
+ * @return boolean
  */
 function isEmpty(val) {
     return val.length ? false : true;
@@ -39,6 +42,7 @@ exports.isEmpty = isEmpty;
 /**
  * 判断是否为数字
  * @param val number
+ * @return boolean
  */
 function isNumber(val) {
     var Reg = /^[0-9]+(\.[0-9]+)?$/;
@@ -48,6 +52,7 @@ exports.isNumber = isNumber;
 /**
  * 判断是否为url
  * @param val string
+ * @return boolean
  */
 function isUrl(val) {
     var Reg = /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/;
@@ -57,6 +62,7 @@ exports.isUrl = isUrl;
 /**
  * 判断数组中的元素是否都相等
  * @param arr Array<any>
+ * @return boolean
  */
 function allEqual(arr) {
     return arr.every(function (val) { return val === arr[0]; });
@@ -66,6 +72,7 @@ exports.allEqual = allEqual;
  * 将数组按照指定的函数逻辑进行分组，满足函数条件的逻辑为真，放入第一个数组中，其它不满足的放入第二个数组
  * @param arr Array<any>
  * @param fn Function
+ * @return Array<any>
  */
 function bifurcateBy(arr, fn) {
     return arr.reduce(function (acc, val, i) { return (acc[fn(val, i) ? 0 : 1].push(val), acc); }, [

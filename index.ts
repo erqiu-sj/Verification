@@ -1,6 +1,7 @@
 /**
  * 判断偶数
  * @param val number | string
+ * @return boolean
  */
 export function isEvent(val: number | string): boolean {
   if (typeof val == "string") return parseInt(val) % 2 === 0;
@@ -9,6 +10,7 @@ export function isEvent(val: number | string): boolean {
 /**
  * 判断奇数
  * @param val number | string
+ * @return boolean
  */
 export function isOdd(val: number | string): boolean {
   if (typeof val == "string") return parseInt(val) % 2 === 0;
@@ -17,6 +19,7 @@ export function isOdd(val: number | string): boolean {
 /**
  * 判断是否为空
  * @param val string
+ * @return boolean
  */
 export function isEmpty(val: string): boolean {
   return val.length ? false : true;
@@ -24,6 +27,7 @@ export function isEmpty(val: string): boolean {
 /**
  * 判断是否为数字
  * @param val number
+ * @return boolean
  */
 export function isNumber(val: number): boolean {
   const Reg = /^[0-9]+(\.[0-9]+)?$/;
@@ -32,6 +36,7 @@ export function isNumber(val: number): boolean {
 /**
  * 判断是否为url
  * @param val string
+ * @return boolean
  */
 export function isUrl(val: string): boolean {
   const Reg = /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/;
@@ -40,6 +45,7 @@ export function isUrl(val: string): boolean {
 /**
  * 判断数组中的元素是否都相等
  * @param arr Array<any>
+ * @return boolean
  */
 export function allEqual(arr: Array<any>): boolean {
   return arr.every((val) => val === arr[0]);
@@ -48,6 +54,7 @@ export function allEqual(arr: Array<any>): boolean {
  * 将数组按照指定的函数逻辑进行分组，满足函数条件的逻辑为真，放入第一个数组中，其它不满足的放入第二个数组
  * @param arr Array<any>
  * @param fn Function
+ * @return Array<any>
  */
 export function bifurcateBy(arr: Array<any>, fn: Function): Array<any> {
   return arr.reduce((acc, val, i) => (acc[fn(val, i) ? 0 : 1].push(val), acc), [
