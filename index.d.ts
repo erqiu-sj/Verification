@@ -1,5 +1,6 @@
 export declare class Verification {
-  constructor(public Option: any) {}
+  Option: any;
+  constructor(Option: any);
   isEvent(): this;
   isOdd(): this;
   isEmpty(): this;
@@ -10,7 +11,7 @@ export declare class Verification {
   capitalizeEveryWord(str: string): string;
   compact(arr: Array<any>): Array<any>;
   defaults(obj: object, ...defs: any): object;
-  Drop(arr: Array<any>, n: number = 1): Array<any>;
+  Drop(arr: Array<any>, n: number): Array<any>;
   dropRightWhile(arr: Array<any>, func: Function): Array<any>;
   dropWhile(arr: Array<any>, func: Function): Array<any>;
   elementContains(parent: HTMLElement, child: HTMLElement): this;
