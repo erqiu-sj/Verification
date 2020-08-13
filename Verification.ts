@@ -2,7 +2,7 @@ export class Verification {
   constructor(public Option: any) {}
   /**
    * 判断偶数
-   * @return this
+   * @return thisd
    */
   isEvent(): this {
     if (typeof this.Option !== "number") throw new Error("并不是一个数字");
