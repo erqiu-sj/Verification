@@ -1,4 +1,5 @@
 export declare class Verification {
+  constructor(public Option: any) {}
   isEvent(): this;
   isOdd(): this;
   isEmpty(): this;
