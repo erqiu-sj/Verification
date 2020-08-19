@@ -1,5 +1,5 @@
 export class Verification {
-  constructor(public Option: any) {}
+  constructor(public Option?: any) {}
   /**
    * 判断偶数
    * @return thisd

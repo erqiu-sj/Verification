@@ -14,7 +14,7 @@ var Verification = /** @class */ (function () {
     }
     /**
      * 判断偶数
-     * @return this
+     * @return thisd
      */
     Verification.prototype.isEvent = function () {
         if (typeof this.Option !== "number")
