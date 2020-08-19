@@ -1,6 +1,6 @@
 {
   "name": "lverifica",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "用于一些简单验证提供了可添加自己验证的 Api",
   "main": "./dist/Verification.js",
   "scripts": {},
